@@ -34,6 +34,27 @@ namespace FirstAspNet.Controllers
         {
             return Ok($"Getting Project with #{id}"); 
         }
+
+        /// <summary>
+        /// When making GET request to api/projects/{pid}/tickets?tid={tid}
+        /// providing both pid and tid
+        /// In FUNCTION we can also specify from what source it comes from, like tid comes from QUERY.
+        /// Then it has to come from that source
+        /// </summary>
+        /// <param name="pid"></param>
+        /// <param name="tid"></param>
+        /// <returns></returns>
+        public IActionResult GetProjectTicket(int pid, [FromQuery] int tid)
+        {
+            if(tid == 0)
+            {
+                return Ok($"Reading all tickets belong to project ${pid}");
+            }
+            else
+            {
+                return Ok($"Reading project #{pid}, ticket #{tid}");
+            }
+        }
         /**
          * When making POST request 
          */
@@ -60,6 +81,6 @@ namespace FirstAspNet.Controllers
         {
             return Ok($"Deleted project #{id}");
         }
-
+          
     }
 }
