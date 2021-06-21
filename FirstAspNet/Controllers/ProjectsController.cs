@@ -56,7 +56,10 @@ namespace FirstAspNet.Controllers
             }
         }
         /**
-         * When making POST request 
+         * When you make http POST request to api/projects
+         * Ticket object will come from BODY of POST request.
+         * It basically json object coming from POST that will convert into object
+         * Usually we use this in PUT, POST, PATCH methods to provide data
          */
         [HttpPost]
         public IActionResult Post()
@@ -64,7 +67,10 @@ namespace FirstAspNet.Controllers
             return Ok($"Creating project");
         }
         /**
-         * When making PUT request 
+         * When you make http PUT request to api/projects
+         * Ticket object will come from BODY of PUT request.
+         * It basically json object coming from PUT that will convert into object
+         * Usually we use this in PUT, POST, PATCH methods to provide data
          */
         [HttpPost]
         public IActionResult Put()

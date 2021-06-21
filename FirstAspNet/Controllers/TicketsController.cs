@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FirstAspNet.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,22 +45,28 @@ namespace FirstAspNet.Controllers
 
         /**
          * When you make http POST request to api/tickets/
+         * Ticket object will come from BODY of POST request.
+         * It basically json object coming from POST that will convert into object
          */
         [HttpPost]
-        public IActionResult Post()
+        public IActionResult Post([FromBody]Ticket ticket)
         {
             //http response has different status code. like 200 which is means its ok
-            return Ok("Creating a new ticket.");
+            return Ok(ticket);
         }
 
         /**
          * When you make http PUT request to api/tickets
+         * Ticket object will come from BODY of PUT request.
+         * It basically json object coming from PUT that will convert into object
+         * Usually we use this in PUT, POST, PATCH methods to provide data
          */
         [HttpPut]
-        public IActionResult Put()
+        public IActionResult Put([FromBody]Ticket ticket)
         {
             //http response has different status code. like 200 which is means its ok
-            return Ok("Updating a new ticket.");
+            //this will return object converted to JSON
+            return Ok(ticket);
         }
 
 
