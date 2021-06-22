@@ -1,6 +1,7 @@
 ﻿using Core.Models;
 using DataStore.EF;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -84,18 +85,46 @@ namespace FirstAspNet.Controllers
         [HttpPost]
         public IActionResult Post([FromBody]Project project)
         {
-            return Ok(project);
+            //with Add we add new project to dbContext, it will be marked as added
+            //and then with SaveChanges we basically insert it to db
+            db.Projects.Add(project);
+            db.SaveChanges();
+
+            //this CreatedAtAction will return 201 code which means created
+            //providing action(function) name GetById providing that function id it needs
+            //and last param is object
+            return CreatedAtAction(
+                nameof(GetById),
+                new {id = project.ProjectId},
+                project
+                );
         }
         /**
-         * When you make http PUT request to api/projects
-         * Ticket object will come from BODY of PUT request.
+         * When you make http PUT request to api/projects/{id}
+         * Ticket object will come from BODY of PUT request. and provide id too
          * It basically json object coming from PUT that will convert into object
          * Usually we use this in PUT, POST, PATCH methods to provide data
          */
-        [HttpPost]
-        public IActionResult Put([FromBody] Project project)
+        [HttpPost("{id}")]
+        public IActionResult Put(int id, [FromBody] Project project)
         {
-            return Ok(project);
+            if (id != project.ProjectId) return BadRequest();
+
+            //entry gets changeTracking for given entity. and we're telling that its state supposed to be modified
+            db.Entry(project).State = EntityState.Modified;
+
+            //try if saveChanges fails then. 
+            try
+            {
+                db.SaveChanges();
+            }
+            catch(Exception ex)
+            {
+                if (db.Projects.Find(id) == null)
+                    return NotFound();
+            }
+
+            return NoContent();
         }
 
         /**
@@ -105,7 +134,16 @@ namespace FirstAspNet.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            return Ok($"Deleted project #{id}");
+            //you can implement like hide field to not actually delete
+            var project = db.Projects.Find(id);
+            if (project == null) 
+                return NotFound();
+            //remove from dbContext, it will mark as deleted, and SaveChanges
+            //will generate actual delete statement to delete from DB
+            db.Projects.Remove(project);
+            db.SaveChanges();
+
+            return Ok(project);
         }
           
     }
