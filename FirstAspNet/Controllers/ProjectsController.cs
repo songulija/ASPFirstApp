@@ -47,8 +47,7 @@ namespace FirstAspNet.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            //first need to find project with that id. if cant find it return error
-            //Find will find entity with given primary key value
+            //Find method will find entity with that primary key value in Projects table
             var project = db.Projects.Find(id);
             if (project == null)
                 return NotFound();
@@ -106,7 +105,7 @@ namespace FirstAspNet.Controllers
          * Usually we use this in PUT, POST, PATCH methods to provide data
          */
         [HttpPut("{id}")]
-        public IActionResult Put(int id, Project project)
+        public IActionResult Put(int id, [FromBody] Project project)
         {
             if (id != project.ProjectId) return BadRequest();
 
@@ -122,6 +121,7 @@ namespace FirstAspNet.Controllers
             {
                 if (db.Projects.Find(id) == null)
                     return NotFound();
+                throw;
             }
 
             return NoContent();
