@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Core.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,20 +47,20 @@ namespace FirstAspNet.Controllers
          * When you make http POST request to api/tickets/
          */
         [HttpPost]
-        public IActionResult Post()
+        public IActionResult Post([FromBody]Ticket ticket)
         {
             //http response has different status code. like 200 which is means its ok
-            return Ok("Creating a new ticket.");
+            return Ok(ticket);
         }
 
         /**
          * When you make http PUT request to api/tickets
          */
         [HttpPut]
-        public IActionResult Put()
+        public IActionResult Put([FromBody]Ticket ticket)
         {
             //http response has different status code. like 200 which is means its ok
-            return Ok("Updating a new ticket.");
+            return Ok(ticket);
         }
 
 

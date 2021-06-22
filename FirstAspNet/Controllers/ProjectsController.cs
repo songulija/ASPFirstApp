@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Core.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,17 +60,17 @@ namespace FirstAspNet.Controllers
          * When making POST request 
          */
         [HttpPost]
-        public IActionResult Post()
+        public IActionResult Post([FromBody]Project project)
         {
-            return Ok($"Creating project");
+            return Ok(project);
         }
         /**
          * When making PUT request 
          */
         [HttpPost]
-        public IActionResult Put()
+        public IActionResult Put([FromBody] Project project)
         {
-            return Ok($"Updating project");
+            return Ok(project);
         }
 
         /**
