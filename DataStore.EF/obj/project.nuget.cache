@@ -1,15 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Ft8feBdPiH+buxxd1bu2YsSUT8SRGgNOyTMp2QPqYKvQeftexGx4s4Y6NtXN9tMzIXQIIlRpBJCHy9jK+/+SKg==",
+  "dgSpecHash": "+jnsoT0tzyZ3mUFUFR5yYWqd7B7qKPwqp8xU9F7WJUOyW/pLcXA+fXaF7ervqIUJeIsWLa/0a0YFTMNDuiuzOA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\FirstAspNet\\FirstAspNet.csproj",
+  "projectFilePath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\DataStore.EF\\DataStore.EF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.16\\microsoft.entityframeworkcore.3.1.16.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.16\\microsoft.entityframeworkcore.abstractions.3.1.16.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.16\\microsoft.entityframeworkcore.analyzers.3.1.16.nupkg.sha512",
-    "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\3.1.16\\microsoft.entityframeworkcore.inmemory.3.1.16.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.16\\microsoft.extensions.caching.abstractions.3.1.16.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.16\\microsoft.extensions.caching.memory.3.1.16.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.16\\microsoft.extensions.configuration.3.1.16.nupkg.sha512",

@@ -59,18 +59,6 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.InMemory/3.1.16": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "3.1.16"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {}
-        }
-      },
       "Microsoft.Extensions.Caching.Abstractions/3.1.16": {
         "type": "package",
         "dependencies": {
@@ -237,20 +225,6 @@
         "runtime": {
           "bin/placeholder/Core.dll": {}
         }
-      },
-      "DataStore.EF/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Core": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "3.1.16"
-        },
-        "compile": {
-          "bin/placeholder/DataStore.EF.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DataStore.EF.dll": {}
-        }
       }
     }
   },
@@ -348,20 +322,6 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.3.1.16.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
-      ]
-    },
-    "Microsoft.EntityFrameworkCore.InMemory/3.1.16": {
-      "sha512": "r7v8UEdZla7VSTxotEc103OI+AedtDMECDwqEaAMVWSROwZCjstVHHnz/ky8Xlcgvl2SCLzq4WKxIYPCHG42AA==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.inmemory/3.1.16",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll",
-        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.xml",
-        "microsoft.entityframeworkcore.inmemory.3.1.16.nupkg.sha512",
-        "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/3.1.16": {
@@ -685,18 +645,12 @@
       "type": "project",
       "path": "../Core/Core.csproj",
       "msbuildProject": "../Core/Core.csproj"
-    },
-    "DataStore.EF/1.0.0": {
-      "type": "project",
-      "path": "../DataStore.EF/DataStore.EF.csproj",
-      "msbuildProject": "../DataStore.EF/DataStore.EF.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Core >= 1.0.0",
-      "DataStore.EF >= 1.0.0",
-      "Microsoft.EntityFrameworkCore.InMemory >= 3.1.16"
+      "Microsoft.EntityFrameworkCore >= 3.1.16"
     ]
   },
   "packageFolders": {
@@ -705,11 +659,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\FirstAspNet\\FirstAspNet.csproj",
-      "projectName": "FirstAspNet",
-      "projectPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\FirstAspNet\\FirstAspNet.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\DataStore.EF\\DataStore.EF.csproj",
+      "projectName": "DataStore.EF",
+      "projectPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\DataStore.EF\\DataStore.EF.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\FirstAspNet\\obj\\",
+      "outputPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\DataStore.EF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -728,9 +682,6 @@
           "projectReferences": {
             "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\Core.csproj": {
               "projectPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\Core.csproj"
-            },
-            "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\DataStore.EF\\DataStore.EF.csproj": {
-              "projectPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\DataStore.EF\\DataStore.EF.csproj"
             }
           }
         }
@@ -745,7 +696,7 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.InMemory": {
+          "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[3.1.16, )"
           }
@@ -761,9 +712,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

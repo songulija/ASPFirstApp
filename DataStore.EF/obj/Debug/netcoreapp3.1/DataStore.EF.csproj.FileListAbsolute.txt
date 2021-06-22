@@ -1,0 +1,12 @@
+C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\bin\Debug\netcoreapp3.1\DataStore.EF.deps.json
+C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\bin\Debug\netcoreapp3.1\DataStore.EF.dll
+C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\bin\Debug\netcoreapp3.1\DataStore.EF.pdb
+C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.AssemblyInfo.cs
+C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.csproj.CopyComplete
+C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.dll
+C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.pdb
