@@ -105,8 +105,8 @@ namespace FirstAspNet.Controllers
          * It basically json object coming from PUT that will convert into object
          * Usually we use this in PUT, POST, PATCH methods to provide data
          */
-        [HttpPost("{id}")]
-        public IActionResult Put(int id, [FromBody] Project project)
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Project project)
         {
             if (id != project.ProjectId) return BadRequest();
 
@@ -118,7 +118,7 @@ namespace FirstAspNet.Controllers
             {
                 db.SaveChanges();
             }
-            catch(Exception ex)
+            catch
             {
                 if (db.Projects.Find(id) == null)
                     return NotFound();
