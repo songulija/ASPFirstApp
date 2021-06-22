@@ -63,19 +63,8 @@ namespace FirstAspNet
                 context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
             }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
-
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
 
             app.UseRouting();
-
-            app.UseAuthorization();
             //basically this is saying that i have these endpoints
             //so endpoint middleware configures endpoints
             app.UseEndpoints(endpoints =>
