@@ -39,10 +39,10 @@ namespace FirstAspNet.Controllers
         /// specified route
         /// </summary>
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
             //http response has different status code. like 200 which is means its ok
-            return Ok(db.Tickets.ToList());
+            return Ok(await db.Tickets.ToListAsync());
         }
 
         /**
@@ -51,10 +51,10 @@ namespace FirstAspNet.Controllers
          */
         [HttpGet]
         [Route("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
             //Find method will find entity with that primary key value in Tickets table
-            var ticket = db.Tickets.Find(id);
+            var ticket = await db.Tickets.FindAsync(id);
             if (ticket == null)
                 return NotFound();
             return Ok(ticket);
@@ -64,12 +64,13 @@ namespace FirstAspNet.Controllers
          * When you make http POST request to api/tickets/
          */
         [HttpPost]
-        public IActionResult Post([FromBody]Ticket ticket)
+        public async Task<IActionResult> Post([FromBody]Ticket ticket)
         {
             //with Add we add new project to dbContext, it will be marked as added
             //and then with SaveChanges we basically insert it to db
             db.Tickets.Add(ticket);
-            db.SaveChanges();
+            //wait until it saves changes then render rest of code
+            await db.SaveChangesAsync();
 
             //this CreatedAtAction will return 201 code which means created
             //providing action(function) name GetById providing that function id it needs
@@ -85,7 +86,7 @@ namespace FirstAspNet.Controllers
          * When you make http PUT request to api/tickets
          */
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody]Ticket ticket)
+        public async Task<IActionResult> Put(int id, [FromBody]Ticket ticket)
         {
             if (id != ticket.TicketId) return BadRequest();
 
@@ -95,11 +96,11 @@ namespace FirstAspNet.Controllers
             //try if saveChanges fails then. 
             try
             {
-                db.SaveChanges();
+                await db.SaveChangesAsync();
             }
             catch
             {
-                if (db.Projects.Find(id) == null)
+                if (await db.Projects.FindAsync(id) == null)
                     return NotFound();
                 throw;
             }
@@ -114,16 +115,16 @@ namespace FirstAspNet.Controllers
          * In function we have to define that id
          */
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             //you can implement like hide field to not actually delete
-            var ticket = db.Tickets.Find(id);
+            var ticket = await db.Tickets.FindAsync(id);
             if (ticket == null)
                 return NotFound();
             //remove from dbContext, it will mark as deleted, and SaveChanges
             //will generate actual delete statement to delete from DB
             db.Tickets.Remove(ticket);
-            db.SaveChanges();
+            await db.SaveChangesAsync();
 
             return Ok(ticket);
         }
