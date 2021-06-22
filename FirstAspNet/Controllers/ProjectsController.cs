@@ -1,4 +1,5 @@
 ﻿using Core.Models;
+using DataStore.EF;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,17 @@ namespace FirstAspNet.Controllers
     [Route("api/[controller]")]
     public class ProjectsController : ControllerBase
     {
+        //create private var for BugsContext which represents Database
+        private readonly BugsContext db;
+
+        //in constructor we need to inject BugsContext
+        //our DbContext in injected in Startup.cs, apply BugsContext that we get to our private var
+        public ProjectsController(BugsContext db)
+        {
+            this.db = db;
+        }
+
+
         /// MVC Controller can return all type of data. Even WebApi can return JSON, XML ....
         /// We need generic return type. IAction result can return all of that. So you can have 
         /// one return type that contains everything. When person makes http GET request to
@@ -25,7 +37,8 @@ namespace FirstAspNet.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok("Getting all projects");
+            //return all data from projects table in our database, AS LIST
+            return Ok(db.Projects.ToList());
         }
         /**
          * When making GET request with id. Id comes from route to parameter
@@ -33,28 +46,34 @@ namespace FirstAspNet.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            return Ok($"Getting Project with #{id}"); 
+            //first need to find project with that id. if cant find it return error
+            //Find will find entity with given primary key value
+            var project = db.Projects.Find(id);
+            if (project == null)
+                return NotFound();
+
+            return Ok(project); 
         }
 
         /// <summary>
         /// When making GET request to api/projects/{pid}/tickets?tid={tid}
-        /// providing both pid and tid
-        /// In FUNCTION we can also specify from what source it comes from, like tid comes from QUERY.
-        /// Then it has to come from that source
+        /// providing both pid 
         /// </summary>
         /// <param name="pid"></param>
         /// <param name="tid"></param>
         /// <returns></returns>
-        public IActionResult GetProjectTicket(int pid, [FromQuery] int tid)
+        [HttpGet]
+        [Route("/api/projects/{pid}/tickets")]
+        public IActionResult GetProjectTickets(int pid)
         {
-            if(tid == 0)
-            {
-                return Ok($"Reading all tickets belong to project ${pid}");
-            }
-            else
-            {
-                return Ok($"Reading project #{pid}, ticket #{tid}");
-            }
+            //In tickets table searching for all tickets where ProjectId
+            //is equal to pid that we get from GET request (from route). Get as List
+            var tickets = db.Tickets.Where(t => t.ProjectId == pid).ToList();
+            if (tickets == null || tickets.Count <= 0)
+                return NotFound();
+
+            return Ok(tickets);
+
         }
         /**
          * When you make http POST request to api/projects
