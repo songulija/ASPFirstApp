@@ -6,3 +6,12 @@ C:\Users\PC\source\repos\ASPFirstApp\Core\obj\Debug\netcoreapp3.1\Core.AssemblyI
 C:\Users\PC\source\repos\ASPFirstApp\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
 C:\Users\PC\source\repos\ASPFirstApp\Core\obj\Debug\netcoreapp3.1\Core.dll
 C:\Users\PC\source\repos\ASPFirstApp\Core\obj\Debug\netcoreapp3.1\Core.pdb
+D:\AspNetApps\ASPFirstApp\Core\bin\Debug\netcoreapp3.1\Core.deps.json
+D:\AspNetApps\ASPFirstApp\Core\bin\Debug\netcoreapp3.1\Core.dll
+D:\AspNetApps\ASPFirstApp\Core\bin\Debug\netcoreapp3.1\Core.pdb
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\netcoreapp3.1\Core.dll
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\netcoreapp3.1\Core.pdb

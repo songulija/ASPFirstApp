@@ -1,5 +1,6 @@
 ﻿using Core.Models;
 using DataStore.EF;
+using FirstAspNet.Filters.V2;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -7,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FirstAspNet.Controllers
+namespace FirstAspNet.Controllers.V2
 {
 
     /// <summary>
@@ -62,8 +63,11 @@ namespace FirstAspNet.Controllers
 
         /**
          * When you make http POST request to api/tickets/
+         * And we have filter for our V2 POST and PUT request. It makes sure
+         * we have added Description to ticket
          */
         [HttpPost]
+        [Ticket_EnsureDescriptionPresentActionFilter]
         public async Task<IActionResult> Post([FromBody]Ticket ticket)
         {
             //with Add we add new project to dbContext, it will be marked as added
@@ -84,8 +88,11 @@ namespace FirstAspNet.Controllers
 
         /**
          * When you make http PUT request to api/tickets
+         * And we have filter for our V2 POST and PUT request. It makes sure
+         * we have added Description to ticket
          */
         [HttpPut("{id}")]
+        [Ticket_EnsureDescriptionPresentActionFilter]
         public async Task<IActionResult> Put(int id, [FromBody]Ticket ticket)
         {
             if (id != ticket.TicketId) return BadRequest();

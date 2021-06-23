@@ -654,19 +654,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\DataStore.EF\\DataStore.EF.csproj",
+      "projectUniqueName": "D:\\AspNetApps\\ASPFirstApp\\DataStore.EF\\DataStore.EF.csproj",
       "projectName": "DataStore.EF",
-      "projectPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\DataStore.EF\\DataStore.EF.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\DataStore.EF\\obj\\",
+      "projectPath": "D:\\AspNetApps\\ASPFirstApp\\DataStore.EF\\DataStore.EF.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\AspNetApps\\ASPFirstApp\\DataStore.EF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -680,8 +680,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\Core.csproj"
+            "D:\\AspNetApps\\ASPFirstApp\\Core\\Core.csproj": {
+              "projectPath": "D:\\AspNetApps\\ASPFirstApp\\Core\\Core.csproj"
             }
           }
         }
@@ -716,7 +716,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

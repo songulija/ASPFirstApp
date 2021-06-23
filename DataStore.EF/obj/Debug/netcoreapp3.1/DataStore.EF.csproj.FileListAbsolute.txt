@@ -10,3 +10,15 @@ C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataSt
 C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.csproj.CopyComplete
 C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.dll
 C:\Users\PC\source\repos\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.pdb
+D:\AspNetApps\ASPFirstApp\DataStore.EF\bin\Debug\netcoreapp3.1\DataStore.EF.deps.json
+D:\AspNetApps\ASPFirstApp\DataStore.EF\bin\Debug\netcoreapp3.1\DataStore.EF.dll
+D:\AspNetApps\ASPFirstApp\DataStore.EF\bin\Debug\netcoreapp3.1\DataStore.EF.pdb
+D:\AspNetApps\ASPFirstApp\DataStore.EF\bin\Debug\netcoreapp3.1\Core.dll
+D:\AspNetApps\ASPFirstApp\DataStore.EF\bin\Debug\netcoreapp3.1\Core.pdb
+D:\AspNetApps\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.csprojAssemblyReference.cache
+D:\AspNetApps\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.AssemblyInfoInputs.cache
+D:\AspNetApps\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.AssemblyInfo.cs
+D:\AspNetApps\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.csproj.CoreCompileInputs.cache
+D:\AspNetApps\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.csproj.CopyComplete
+D:\AspNetApps\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.dll
+D:\AspNetApps\ASPFirstApp\DataStore.EF\obj\Debug\netcoreapp3.1\DataStore.EF.pdb
