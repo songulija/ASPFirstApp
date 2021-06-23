@@ -17,6 +17,7 @@ namespace FirstAspNet.Controllers
     /// it gets everything from name before word Controller
     /// it gets everything from name before word Controller. We can specify ApiVersion number
     /// </summary>
+    
     [ApiVersion("1.0")]
     [ApiController]
     [Route("api/[controller]")]

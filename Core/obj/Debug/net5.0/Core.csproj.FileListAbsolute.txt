@@ -1,0 +1,12 @@
+D:\AspNetApps\ASPFirstApp\Core\bin\Debug\net5.0\Core.deps.json
+D:\AspNetApps\ASPFirstApp\Core\bin\Debug\net5.0\Core.dll
+D:\AspNetApps\ASPFirstApp\Core\bin\Debug\net5.0\ref\Core.dll
+D:\AspNetApps\ASPFirstApp\Core\bin\Debug\net5.0\Core.pdb
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\net5.0\Core.csproj.AssemblyReference.cache
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\net5.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\net5.0\Core.AssemblyInfoInputs.cache
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\net5.0\Core.AssemblyInfo.cs
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\net5.0\Core.csproj.CoreCompileInputs.cache
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\net5.0\Core.dll
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\net5.0\ref\Core.dll
+D:\AspNetApps\ASPFirstApp\Core\obj\Debug\net5.0\Core.pdb

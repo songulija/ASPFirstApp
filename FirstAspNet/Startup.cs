@@ -48,6 +48,8 @@ namespace FirstAspNet
             services.AddControllers();
             services.AddApiVersioning(options =>
             {
+                //so it will let us know api version that is used as header
+                options.ReportApiVersions = true;
                 //we will use http header to do versioning. that means version number
                 //is not in url or query string. they will have same url
                 options.AssumeDefaultVersionWhenUnspecified = true;
@@ -59,6 +61,11 @@ namespace FirstAspNet
                 options.ApiVersionReader = new HeaderApiVersionReader("X-API-Version");
             });
 
+
+
+            services.AddVersionedApiExplorer(options => options.GroupNameFormat = "'v'VVV");
+            //to generate swagger with default configs
+            services.AddSwaggerGen();
             
         }
 
@@ -75,6 +82,13 @@ namespace FirstAspNet
                 //ensure that database isDeleted and then created
                 context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
+
+                //Configure OpenApi. Configuring Swagger
+                app.UseSwagger();
+                app.UseSwaggerUI(options =>
+                {
+                    options.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPI v1");
+                });
             }
 
             app.UseRouting();
