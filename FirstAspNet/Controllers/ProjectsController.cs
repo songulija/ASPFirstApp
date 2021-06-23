@@ -15,7 +15,9 @@ namespace FirstAspNet.Controllers
     /// And define this class as ApiController. we can add route to controller.
     /// and [controller] will get name of our controller, in our case Tickets becouse
     /// it gets everything from name before word Controller
+    /// it gets everything from name before word Controller. We can specify ApiVersion number
     /// </summary>
+    [ApiVersion("1.0")]
     [ApiController]
     [Route("api/[controller]")]
     public class ProjectsController : ControllerBase

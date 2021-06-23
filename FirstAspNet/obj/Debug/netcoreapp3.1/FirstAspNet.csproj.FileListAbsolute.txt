@@ -145,3 +145,4 @@ D:\AspNetApps\ASPFirstApp\FirstAspNet\obj\Debug\netcoreapp3.1\FirstAspNet.csproj
 D:\AspNetApps\ASPFirstApp\FirstAspNet\obj\Debug\netcoreapp3.1\FirstAspNet.dll
 D:\AspNetApps\ASPFirstApp\FirstAspNet\obj\Debug\netcoreapp3.1\FirstAspNet.pdb
 D:\AspNetApps\ASPFirstApp\FirstAspNet\obj\Debug\netcoreapp3.1\FirstAspNet.genruntimeconfig.cache
+D:\AspNetApps\ASPFirstApp\FirstAspNet\obj\Debug\netcoreapp3.1\FirstAspNet.MvcApplicationPartsAssemblyInfo.cs
