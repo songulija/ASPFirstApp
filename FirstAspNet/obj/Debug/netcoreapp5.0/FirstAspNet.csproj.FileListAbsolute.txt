@@ -49,3 +49,8 @@ D:\AspNetApps\ASPFirstApp\FirstAspNet\obj\Debug\netcoreapp5.0\FirstAspNet.dll
 D:\AspNetApps\ASPFirstApp\FirstAspNet\obj\Debug\netcoreapp5.0\ref\FirstAspNet.dll
 D:\AspNetApps\ASPFirstApp\FirstAspNet\obj\Debug\netcoreapp5.0\FirstAspNet.pdb
 D:\AspNetApps\ASPFirstApp\FirstAspNet\obj\Debug\netcoreapp5.0\FirstAspNet.genruntimeconfig.cache
+D:\AspNetApps\ASPFirstApp\FirstAspNet\bin\Debug\netcoreapp5.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
+D:\AspNetApps\ASPFirstApp\FirstAspNet\bin\Debug\netcoreapp5.0\Microsoft.OpenApi.dll
+D:\AspNetApps\ASPFirstApp\FirstAspNet\bin\Debug\netcoreapp5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\AspNetApps\ASPFirstApp\FirstAspNet\bin\Debug\netcoreapp5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\AspNetApps\ASPFirstApp\FirstAspNet\bin\Debug\netcoreapp5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
