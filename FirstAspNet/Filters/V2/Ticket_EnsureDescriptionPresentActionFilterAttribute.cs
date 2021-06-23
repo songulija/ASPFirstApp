@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FirstAspNet.Filters.V2
 {
-    public class Ticket_EnsureDescriptionPresent : ActionFilterAttribute
+    public class Ticket_EnsureDescriptionPresentActionFilterAttribute : ActionFilterAttribute
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {

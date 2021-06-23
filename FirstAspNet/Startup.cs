@@ -45,6 +45,12 @@ namespace FirstAspNet
             //adds services for controllers. basically we configure our added middleware
             //in  Configure endpoints.MapControllers. We dont configure more leavy empty by default
             services.AddControllers();
+            services.AddApiVersioning(options =>
+            {
+                //we will use http header to do versioning. that means version number
+                //is not in url or query string. they will have same url
+                options.AssumeDefaultVersionWhenUnspecified = true;
+            });
 
             
         }
