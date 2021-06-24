@@ -1,6 +1,7 @@
 ﻿using Core.Models;
 using DataStore.EF;
 using FirstAspNet.Filters.V2;
+using FirstAspNet.QueryFilters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -42,10 +43,23 @@ namespace FirstAspNet.Controllers.V2
         /// specified route
         /// </summary>
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromQuery] TicketQueryFilter ticketQueryFilter)
         {
+            IQueryable<Ticket> tickets = db.Tickets;
+            if (ticketQueryFilter != null)
+            {
+                //searching by one of these fields. id,title or description
+                //it would look like this. localhost://44314/api/tickets?id=1. so it will search by id
+                if(ticketQueryFilter.Id.HasValue)
+                    tickets = tickets.Where(x => x.TicketId == ticketQueryFilter.Id);
+                if (!string.IsNullOrWhiteSpace(ticketQueryFilter.Title))
+                    tickets = tickets.Where(x => x.Title.Contains(ticketQueryFilter.Title, StringComparison.OrdinalIgnoreCase));
+                if (!string.IsNullOrWhiteSpace(ticketQueryFilter.Description))
+                    tickets = tickets.Where(x => x.Description.Contains(ticketQueryFilter.Description, StringComparison.OrdinalIgnoreCase));
+            }
+            
             //http response has different status code. like 200 which is means its ok
-            return Ok(await db.Tickets.ToListAsync());
+            return Ok(await tickets.ToListAsync());
         }
 
         /**

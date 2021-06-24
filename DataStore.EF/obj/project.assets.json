@@ -543,19 +543,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\AspNetApps\\ASPFirstApp\\DataStore.EF\\DataStore.EF.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\DataStore.EF\\DataStore.EF.csproj",
       "projectName": "DataStore.EF",
-      "projectPath": "D:\\AspNetApps\\ASPFirstApp\\DataStore.EF\\DataStore.EF.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\AspNetApps\\ASPFirstApp\\DataStore.EF\\obj\\",
+      "projectPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\DataStore.EF\\DataStore.EF.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\DataStore.EF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -569,8 +569,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\AspNetApps\\ASPFirstApp\\Core\\Core.csproj": {
-              "projectPath": "D:\\AspNetApps\\ASPFirstApp\\Core\\Core.csproj"
+            "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\Core.csproj"
             }
           }
         }

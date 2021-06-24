@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AspNetApps\\ASPFirstApp\\Core\\Core.csproj": {}
+    "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\Core.csproj": {}
   },
   "projects": {
-    "D:\\AspNetApps\\ASPFirstApp\\Core\\Core.csproj": {
+    "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AspNetApps\\ASPFirstApp\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\AspNetApps\\ASPFirstApp\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\AspNetApps\\ASPFirstApp\\Core\\obj\\",
+        "projectPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XNu9grNHlf2EonWY2BRSWz7cP+yQV0ZVQ8iXOpcBedLe6nAeEwFOFQXnMhodboGeuXjSShgaYC9wKMyBGIey9w==",
+  "dgSpecHash": "KrQujxAdkBFjaMqT0qzmFoJwvo70PFCElqk9yQa/WKVRba+WEyuNNSnkAssKTVMHF5ZQ/J9AmWGfuY/14zH6eg==",
   "success": true,
-  "projectFilePath": "D:\\AspNetApps\\ASPFirstApp\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
