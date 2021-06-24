@@ -20,7 +20,6 @@ namespace App.Repository.ApiClient
             this.httpClient = httpClient;
 
             httpClient.DefaultRequestHeaders.Accept.Clear();
-            //make sure to accept json
             httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         }
 
@@ -45,7 +44,7 @@ namespace App.Repository.ApiClient
             response.EnsureSuccessStatusCode();
         }
 
-        public async Task InvokeDelete<T>(string uri)
+        public async Task InvokeDelete(string uri)
         {
             var response = await httpClient.DeleteAsync(GetUrl(uri));
             response.EnsureSuccessStatusCode();
