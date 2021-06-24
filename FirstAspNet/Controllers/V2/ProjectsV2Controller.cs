@@ -1,5 +1,6 @@
 ﻿using DataStore.EF;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,29 @@ namespace FirstAspNet.Controllers.V2
             return Ok(await db.Projects.ToListAsync());
         }
 
-        
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var project = await db.Projects.FindAsync(id);
+            if (project == null)
+                return NotFound();
+
+            return Ok(project);
+        }
+
+        [HttpGet]
+        [Route("/api/projects/{pid}/tickets")]
+        public async Task<IActionResult> GetProjectTickets(int pId)
+        {
+            var tickets = await db.Tickets.Where(t => t.ProjectId == pId).ToListAsync();
+            if (tickets == null || tickets.Count <= 0)
+                return NotFound();
+
+            return Ok(tickets);
+        }
+
+
 
     }
 }
