@@ -85,6 +85,19 @@ namespace FirstAspNet.Controllers.V2
         }
 
 
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var project = await db.Projects.FindAsync(id);
+            if (project == null) return NotFound();
+
+            db.Projects.Remove(project);
+            await db.SaveChangesAsync();
+
+            return Ok(project);
+        }
+
+
 
     }
 }
