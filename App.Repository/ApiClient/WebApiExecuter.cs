@@ -33,10 +33,12 @@ namespace App.Repository.ApiClient
         public async Task<T> InvokePost<T>(string uri, T obj)
         {
             var response = await httpClient.PostAsJsonAsync(GetUrl(uri), obj);
-            response.EnsureSuccessStatusCode();
+            await HandleError(response);
 
             return await response.Content.ReadFromJsonAsync<T>();
         }
+
+        
 
         public async Task InvokePut<T>(string uri, T obj)
         {
@@ -53,6 +55,16 @@ namespace App.Repository.ApiClient
         private string GetUrl(string uri)
         {
             return $"{baseUrl}/{uri}";
+        }
+
+
+        private static async Task HandleError(HttpResponseMessage response)
+        {
+            if (!response.IsSuccessStatusCode)
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                throw new HttpRequestException(error);
+            }
         }
     }
 }
