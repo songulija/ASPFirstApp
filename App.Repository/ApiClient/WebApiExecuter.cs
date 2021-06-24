@@ -43,13 +43,13 @@ namespace App.Repository.ApiClient
         public async Task InvokePut<T>(string uri, T obj)
         {
             var response = await httpClient.PutAsJsonAsync(GetUrl(uri), obj);
-            response.EnsureSuccessStatusCode();
+            await HandleError(response);
         }
 
         public async Task InvokeDelete(string uri)
         {
             var response = await httpClient.DeleteAsync(GetUrl(uri));
-            response.EnsureSuccessStatusCode();
+            await HandleError(response);
         }
 
         private string GetUrl(string uri)
