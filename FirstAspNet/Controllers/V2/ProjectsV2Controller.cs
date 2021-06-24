@@ -1,4 +1,5 @@
-﻿using DataStore.EF;
+﻿using Core.Models;
+using DataStore.EF;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -46,6 +47,41 @@ namespace FirstAspNet.Controllers.V2
                 return NotFound();
 
             return Ok(tickets);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] Project project)
+        {
+            db.Projects.Add(project);
+            await db.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetById),
+                    new { id = project.ProjectId },
+                    project
+                );
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, Project project)
+        {
+            if (id != project.ProjectId) return BadRequest();
+
+            db.Entry(project).State = EntityState.Modified;
+
+            try
+            {
+                await db.SaveChangesAsync();
+            }
+            catch
+            {
+                if (db.Projects.Find(id) == null)
+                    return NotFound();
+                throw;
+            }
+
+
+            return NoContent();
         }
 
 
