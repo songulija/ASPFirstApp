@@ -46,18 +46,20 @@ namespace FirstAspNet.Controllers.V2
         public async Task<IActionResult> Get([FromQuery] TicketQueryFilter ticketQueryFilter)
         {
             IQueryable<Ticket> tickets = db.Tickets;
+            //searching by one of these fields. id,title or description
+            //it would look like this. localhost://44314/api/tickets?id=1. so it will search by id
             if (ticketQueryFilter != null)
             {
-                //searching by one of these fields. id,title or description
-                //it would look like this. localhost://44314/api/tickets?id=1. so it will search by id
-                if(ticketQueryFilter.Id.HasValue)
+                if (ticketQueryFilter.Id.HasValue)
                     tickets = tickets.Where(x => x.TicketId == ticketQueryFilter.Id);
-                if (!string.IsNullOrWhiteSpace(ticketQueryFilter.Title))
-                    tickets = tickets.Where(x => x.Title.Contains(ticketQueryFilter.Title, StringComparison.OrdinalIgnoreCase));
-                if (!string.IsNullOrWhiteSpace(ticketQueryFilter.Description))
-                    tickets = tickets.Where(x => x.Description.Contains(ticketQueryFilter.Description, StringComparison.OrdinalIgnoreCase));
+
+                if (!string.IsNullOrWhiteSpace(ticketQueryFilter.TitleOrDescription))
+                    tickets = tickets.Where(x => x.Title.Contains(ticketQueryFilter.TitleOrDescription,
+                       StringComparison.OrdinalIgnoreCase) ||
+                       x.Description.Contains(ticketQueryFilter.TitleOrDescription,
+                       StringComparison.OrdinalIgnoreCase));
             }
-            
+
             //http response has different status code. like 200 which is means its ok
             return Ok(await tickets.ToListAsync());
         }

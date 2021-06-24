@@ -8,30 +8,35 @@ using System.Threading.Tasks;
 HttpClient httpClient = new();
 IWebApiExecuter apiExecuter = new WebApiExecuter("http://localhost:41936", httpClient);
 
-Console.WriteLine("////////////////////");
-Console.WriteLine("Reading projects...");
-await GetProjects();
+//await TestProjects();
+await TestProjects();
 
+async Task TestProjects()
+{
+    Console.WriteLine("////////////////////");
+    Console.WriteLine("Reading projects...");
+    await GetProjects();
 
-Console.WriteLine("////////////////////");
-Console.WriteLine("Reading project tickets...");
-await GetProjectTickets(1);
+    Console.WriteLine("////////////////////");
+    Console.WriteLine("Reading project tickets...");
+    await GetProjectTickets(1);
 
-Console.WriteLine("////////////////////");
-Console.WriteLine("Create a project...");
-var pId = await CreateProject();
-await GetProjects();
+    Console.WriteLine("////////////////////");
+    Console.WriteLine("Create a project...");
+    var pId = await CreateProject();
+    await GetProjects();
 
-Console.WriteLine("////////////////////");
-Console.WriteLine("Update a project...");
-var project = await GetProject(pId);
-await UpdateProject(project);
-await GetProjects();
+    Console.WriteLine("////////////////////");
+    Console.WriteLine("Update a project...");
+    var project = await GetProject(pId);
+    await UpdateProject(project);
+    await GetProjects();
 
-Console.WriteLine("////////////////////");
-Console.WriteLine("Delete a project...");
-await DeleteProject(pId);
-await GetProjects();
+    Console.WriteLine("////////////////////");
+    Console.WriteLine("Delete a project...");
+    await DeleteProject(pId);
+    await GetProjects();
+}
 
 //get all projects
 async Task GetProjects()
