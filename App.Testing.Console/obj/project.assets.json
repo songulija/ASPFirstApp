@@ -11,6 +11,20 @@
           "lib/net5.0/System.Net.Http.Json.dll": {}
         }
       },
+      "App.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Core": "1.0.0",
+          "System.Net.Http.Json": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/App.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/App.Repository.dll": {}
+        }
+      },
       "Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -46,6 +60,11 @@
         "version.txt"
       ]
     },
+    "App.Repository/1.0.0": {
+      "type": "project",
+      "path": "../App.Repository/App.Repository.csproj",
+      "msbuildProject": "../App.Repository/App.Repository.csproj"
+    },
     "Core/1.0.0": {
       "type": "project",
       "path": "../Core/Core.csproj",
@@ -54,8 +73,8 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Core >= 1.0.0",
-      "System.Net.Http.Json >= 5.0.0"
+      "App.Repository >= 1.0.0",
+      "Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -64,11 +83,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\App.Repository\\App.Repository.csproj",
-      "projectName": "App.Repository",
-      "projectPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\App.Repository\\App.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\App.Testing.Console\\App.Testing.Console.csproj",
+      "projectName": "App.Testing.Console",
+      "projectPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\App.Testing.Console\\App.Testing.Console.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\App.Repository\\obj\\",
+      "outputPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\App.Testing.Console\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -85,6 +104,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\App.Repository\\App.Repository.csproj": {
+              "projectPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\App.Repository\\App.Repository.csproj"
+            },
             "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\Core.csproj": {
               "projectPath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\Core\\Core.csproj"
             }
@@ -100,12 +122,6 @@
     "frameworks": {
       "net5.0": {
         "targetAlias": "net5.0",
-        "dependencies": {
-          "System.Net.Http.Json": {
-            "target": "Package",
-            "version": "[5.0.0, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

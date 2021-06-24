@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ni53/o7GCtdmWr5iUWa0dS9GfXGhcvBAy8d5BG8prwUtEbTxRFRWatzNNToVGK0+lnHh4mfEjguV7ZQMP2Jy7w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\PC\\source\\repos\\ASPFirstApp\\App.Testing.Console\\App.Testing.Console.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PC\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

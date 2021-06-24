@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace App.Repository.ApiClient
 {
     //this contains code to invoke api endpoints
-    class WebApiExecuter
+    public class WebApiExecuter : IWebApiExecuter
     {
         private readonly string baseUrl;
         private readonly HttpClient httpClient;
@@ -20,6 +20,7 @@ namespace App.Repository.ApiClient
             this.httpClient = httpClient;
 
             httpClient.DefaultRequestHeaders.Accept.Clear();
+            //make sure to accept json
             httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         }
 
